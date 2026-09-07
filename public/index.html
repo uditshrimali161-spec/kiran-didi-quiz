@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Kiran Didi Quiz 👑</title>
+
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+
+</head>
+
+<body>
+
+<!-- START SCREEN -->
+
+<section id="startScreen">
+
+<div class="container">
+
+<div class="card start-card">
+
+<div class="crown">
+👑
+</div>
+
+<h1>
+Kiran Didi Quiz
+</h1>
+
+<p class="subtitle">
+
+Welcome to your special quiz! ❤️
+
+<br><br>
+
+Aaj dekhte hain Kiran Didi
+kitna kamaal karti hain. 😌
+
+<br><br>
+
+<strong>
+21 Questions • 5 Minutes
+</strong>
+
+</p>
+
+<input
+    id="nameInput"
+    type="text"
+    placeholder="Enter your name"
+    maxlength="60"
+>
+
+<button
+    class="primary"
+    onclick="startQuiz()"
+>
+Start Quiz
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ SCREEN -->
+
+<section id="quizScreen">
+
+<div class="container">
+
+<header>
+
+<strong>
+Kiran Didi Quiz
+</strong>
+
+<div id="timer">
+05:00
+</div>
+
+</header>
+
+<div class="progress-info">
+
+<span id="questionCounter">
+Question 1 of 21
+</span>
+
+</div>
+
+<div class="progress">
+
+<div id="progressBar">
+</div>
+
+</div>
+
+<div class="card quiz-card">
+
+<div
+    id="questionNumber"
+    class="question-number"
+>
+Question 1
+</div>
+
+<h2 id="questionText">
+</h2>
+
+<div id="options">
+</div>
+
+<div class="navigation">
+
+<button
+    id="previousButton"
+    class="secondary"
+    onclick="previousQuestion()"
+>
+← Previous
+</button>
+
+<button
+    id="nextButton"
+    class="primary"
+    onclick="nextQuestion()"
+>
+Next →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESULT SCREEN -->
+
+<section id="resultScreen">
+
+<div class="container">
+
+<div class="card result-card">
+
+<div
+    id="celebration"
+    class="celebration"
+>
+🎉
+</div>
+
+<p class="final-label">
+FINAL RESULT
+</p>
+
+<div class="rank">
+#1
+</div>
+
+<h1>
+🏆
+<span id="resultName"></span>
+</h1>
+
+<div
+    id="resultScore"
+    class="score"
+>
+</div>
+
+<div class="prize">
+
+<div>
+🎁 SPECIAL PRIZE
+</div>
+
+<h2>
+👑 Didi Queen Award
+</h2>
+
+<p>
+Special Treat + Unlimited Appreciation ❤️
+</p>
+
+</div>
+
+<p class="message">
+
+Congratulations! 🎉
+
+<br><br>
+
+Aapne quiz mein bahut hi achha
+perform kiya hai.
+
+<br><br>
+
+Aur officially...
+
+<br><br>
+
+<strong>
+RANK #1 — KIRAN DIDI 👑
+</strong>
+
+<br><br>
+
+Rank #1 ko khaali haath kaise bhej
+sakte hain? 😌
+
+<br><br>
+
+Aap jeeti hain:
+
+<br><br>
+
+<strong>
+
+🎁 A Special Treat
+
+<br>
+
+❤️ Unlimited Appreciation
+
+<br>
+
+👑 Didi Queen Award
+
+</strong>
+
+</p>
+
+<a
+    id="pdfButton"
+    class="pdf-button"
+    href="#"
+    target="_blank"
+>
+📄 Download Your Test Report
+</a>
+
+<h2 class="review-title">
+Answer Review
+</h2>
+
+<div id="review">
+</div>
+
+<button
+    class="primary restart"
+    onclick="location.reload()"
+>
+Take Quiz Again
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
