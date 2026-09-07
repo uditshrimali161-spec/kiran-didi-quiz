@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #111111;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+    padding: 18px 15px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow:
+        0 5px 25px rgba(0,0,0,0.05);
+}
+
+/* START */
+
+#startScreen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.start-card {
+    text-align: center;
+}
+
+.crown {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 9px;
+    padding: 14px 18px;
+    font-size: 16px;
+}
+
+.primary {
+    background: #111;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+}
+
+.secondary {
+    background: #eeeeee;
+    color: #111;
+    flex: 1;
+}
+
+/* QUIZ */
+
+#quizScreen {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#timer {
+    background: #f3f3f3;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.progress-info {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.progress {
+    height: 7px;
+    background: #eeeeee;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #111;
+    transition: width 0.2s ease;
+}
+
+.question-number {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.quiz-card h2 {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.option {
+    width: 100%;
+    display: block;
+    text-align: left;
+    background: #fff;
+    color: #111;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 11px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.option.selected {
+    border: 2px solid #111;
+    background: #f5f5f5;
+}
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#nextButton {
+    flex: 1;
+}
+
+/* RESULT */
+
+#resultScreen {
+    display: none;
+    min-height: 100vh;
+    padding-top: 30px;
+}
+
+.result-card {
+    text-align: center;
+}
+
+.celebration {
+    font-size: 70px;
+}
+
+.final-label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+.rank {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 5px 0 10px;
+}
+
+.score {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.prize {
+    background: #fafafa;
+    border: 1px dashed #aaa;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.prize h2 {
+    margin: 8px 0;
+}
+
+.prize p {
+    color: #666;
+}
+
+.message {
+    color: #555;
+    line-height: 1.7;
+    margin: 25px 0;
+}
+
+.pdf-button {
+    display: block;
+    width: 100%;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.review-title {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+#review {
+    text-align: left;
+}
+
+.review-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.review-question {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.answer-line {
+    margin-top: 7px;
+}
+
+.correct {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.wrong {
+    color: #c62828;
+    font-weight: bold;
+}
+
+.not-attempted {
+    color: #777;
+    font-weight: bold;
+}
+
+.secret-review {
+    background: #fff7ed;
+    border: 1px dashed #f97316;
+    border-radius: 12px;
+    padding: 14px;
+    margin-top: 10px;
+}
+
+.restart {
+    margin-top: 25px;
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .quiz-card h2 {
+        font-size: 18px;
+    }
+
+    .rank {
+        font-size: 48px;
+    }
+
+}
